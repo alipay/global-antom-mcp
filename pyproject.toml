@@ -1,0 +1,54 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/modelcontextprotocol", "src/shared"]
+
+[tool.uv.workspace]
+members = ["example"]
+
+
+[project]
+name = "ant-intl-antom-mcp"
+version = "1.0.0"
+description = "A Model Context Protocol (MCP) compatible server that integrates Ant International's Antom payment APIs, enabling AI assistants to handle payment and refund operations seamlessly."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "global-open-sdk-python>=1.4.4",
+    "mcp[cli]>=1.9.0",
+    "cryptography==44.0.3",
+    "rsa>=4.9.1",
+]
+authors = [
+    { name = "quding", email = "niuli.nl@ant-intl.com" },
+    { name = "lingqi", email = "lilingwei.llw@ant-intl.com" },
+]
+license = { text = "MIT License" }
+
+classifiers = [
+    "Development Status :: 5 - Production",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Office/Business :: Financial",
+]
+
+
+[project.optional-dependencies]
+dev = [
+    "python-dotenv>=1.1.0",
+    "twine",
+]
+
+[project.scripts]
+ant-intl-antom-mcp = "modelcontextprotocol.server:main"
+
+
+[project.urls]
+Homepage = "https://github.com/alipay/global-antom-mcp"
+Repository = "https://github.com/alipay/global-antom-mcp"

@@ -6,5 +6,5 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "python-dotenv>=1.1.0",
-    "qwen-agent[gui,mcp]>=0.0.26"
+    "qwen-agent[code-interpreter,gui,mcp,rag]>=0.0.26",
 ]

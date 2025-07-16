@@ -11,13 +11,13 @@ members = ["example"]
 
 [project]
 name = "ant-intl-antom-mcp"
-version = "1.0.0"
+version = "1.0.1"
 description = "A Model Context Protocol (MCP) compatible server that integrates Ant International's Antom payment APIs, enabling AI assistants to handle payment and refund operations seamlessly."
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "global-open-sdk-python>=1.4.4",
-    "mcp[cli]>=1.9.0",
+    "global-open-sdk-python>=1.4.6",
+    "mcp[cli]>=1.11.0",
     "cryptography==44.0.3",
     "rsa>=4.9.1",
 ]
